@@ -9,12 +9,18 @@ jobs:
   include:
     - os: linux
       env: LFTP_SUPPORT=1
+      arch:
+       - amd64
+       - ppc64le
       addons:
         apt:
           packages:
             - lftp
     - os: osx
       env: LFTP_SUPPORT=1
+      arch:
+       - amd64
+       - ppc64le
       addons:
         homebrew:
           packages:
